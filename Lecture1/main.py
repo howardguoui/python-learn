@@ -38,3 +38,25 @@ num1 = num2
 num2 = temp
 
 num1, num2 = num2, num1
+
+class Solution:
+    """
+    @param n: An integer
+    @return: A list of strings.
+    """
+
+    def fizzBuzz(self, n):
+        rst = []
+        for i in range(1, n + 1):
+            print(i)
+
+            rst.append(str(i))
+
+        for i in range(2, n, 3):
+            rst[i] = "fizz"
+        for i in range(4, n, 5):
+            if rst[i] == "fizz":
+                rst[i] = "fizz buzz"
+                continue
+            rst[i] = "buzz"
+        return rst

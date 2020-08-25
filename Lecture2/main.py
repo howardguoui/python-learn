@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
         scores[i], scores[max_index] = scores[max_index], scores[i]
         names[i], names[max_index] = names[max_index], names[i]
-
+    print(10 // -3)
     print('Sorted:')
     for i in range(n):
         print(names[i], scores[i])
