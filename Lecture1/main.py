@@ -39,6 +39,7 @@ num2 = temp
 
 num1, num2 = num2, num1
 
+
 class Solution:
     """
     @param n: An integer
@@ -60,3 +61,39 @@ class Solution:
                 continue
             rst[i] = "buzz"
         return rst
+
+
+class Solution2:
+    """
+    @param n: An integer
+    @return: A list of strings.
+    """
+
+    def fizzBuzz(self, n):
+        # write your code here
+        results = [];
+        for i in range(1, n + 1):
+            if (i % 3 == 0 and i % 5 == 0):
+                results.append("fizz buzz")
+            elif (i % 3 == 0):
+                results.append("fizz")
+            elif (i % 5 == 0):
+                results.append("buzz")
+            else:
+                results.append(str(i))
+        return results
+
+    def fizzBuzz2(self, n):
+        return ['fizz' * (not i % 3) + ' ' * (not i % 15) + 'buzz' * (not i % 5) or str(i) for i in range(1, n + 1)]
+
+
+class Solution3:
+    """
+    @param: n: An integer
+    @return: A list of strings.
+    """
+
+    def fizzBuzz(self, n):
+        # write your code here
+        return [' '.join([w + 'zz' for m, w in {3: 'fi', 5: 'bu'}.items() if x % m < 1]) or str(x) for x in
+                range(1, n + 1)]
